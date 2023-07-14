@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <!-- 
+            1) Daha özel olan CSS kodları daha üste koyulur. 
+            2) External CSS kodlarını ilgili sayfaya <link> etiketi ile aşağıdaki gibi bağlarız.
+        -->
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Index</title>
+        <style>
+
+            /* 
+                INTERNAL CSS KODLARI
+                
+                1) Internal CSS kodları <head> etiketi içerisinde, <style> etiketleri 
+                   arasına yazılır.
+                2) Internal CSS kodları External CSS kodlarına göre daha baskın bir durumdadır. 
+            */
+            h1{
+                background-color: aquamarine;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <h1>Index Page</h1>
+        
+        <ul>
+            <li><a href="">Index</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Reference</a></li>
+        </ul>
+
+        <p>External CSS</p>
+
+    </body>
+</html>

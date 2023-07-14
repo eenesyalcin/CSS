@@ -1,0 +1,59 @@
+/*
+    GROUP SELECTOR
+
+    (*)       --> Tüm etiketler.
+    (p)       --> Tüm p etiketleri.
+    (div p)   --> <div> etiketi içinddeki tüm <p> etiketleri.
+    (div,p)   --> Tüm <div> ve tüm <p> etiketleri.
+    (div > p) --> Üst etiketi <div> olan tüm <p> etiketleri.
+    (p ~ div) --> <p> etiketi ile aynı seviyede olan tüm <div> etiketleri.
+    (p + div) --> <p> etiketinden sonra gelen ve aynı seviyede olan ilk <div> etiketi.
+*/
+
+
+*{
+    border: blue 1px solid;
+}
+
+
+p{
+    font-size: 30px;
+}
+
+
+/* Sınıfı 'box' olan <div> etiketleri ve tüm <p> etiketleri. */
+div.box,p{
+    background-color: yellow;
+}
+
+
+div p{
+    color: red;
+}
+
+
+/* Sınıfı 'container' olan etiketlerin altındaki tüm <div> etiketleri. */
+.container div{
+    border: green 3px solid;
+}
+
+
+/* Sınıfı 'container' olan etiketlerin altındaki, sınıfı 'box' olan tüm <div> etiketleri. */
+.container div.box{
+    border: darkmagenta 5px solid;
+}
+
+
+div > p{
+    background-color: aquamarine;
+}
+
+
+p ~ div{
+    background-color: palevioletred;
+} 
+
+
+p + div{
+    background-color: black;
+}

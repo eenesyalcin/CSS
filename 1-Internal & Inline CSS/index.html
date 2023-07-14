@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Internal & Inline CSS</title>
+        <style>
+
+            /* 
+                INTERNAL CSS KODLARI
+                
+                1) Internal CSS kodları <head> etiketi içerisinde, <style> etiketleri arasına yazılır.
+                2) Internal CSS kodları Inline CSS kodlarına göre daha pasif bir durumdadır. 
+            */
+            h1{
+                color: red;
+                font-size: 50px;
+                text-align: center;
+            }
+
+            p{
+                color: blue;
+                font-size: 20px;
+                text-align: center;
+                border: 1px solid red;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <!-- 
+            INLINE CSS KODLARI 
+
+            1) Inline CSS kodları <body> etiketindeki diğer etiketlerin içerisinde, 
+               <style> etiketleri arasına yazılır.
+            2) Inline CSS kodları Internal CSS kodlarına göre daha baskın bir durumdadır. 
+        -->
+        <h1 style="border: 1px solid red;">WEB GELİŞTİRME</h1>
+        
+        <p style="color: green; font-size: 30px">Komple Uygulamalı Web Geliştirme</p>
+        <p style="border: none;">Komple Uygulamalı Web Geliştirme</p>
+        <p>Komple Uygulamalı Web Geliştirme</p>
+
+    </body>
+</html>

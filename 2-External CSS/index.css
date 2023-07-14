@@ -1,0 +1,10 @@
+/* 
+    EXTERNAL CSS KODLARI 
+
+    1) External CSS kodları harici bir ".css" uzantılı dosya içerisine yazılır. 
+    2) External CSS kodları Internal CSS kodlarına göre daha pasif bir durumdadır.  
+*/
+p{
+    color: rebeccapurple;
+    font-size: 50px;
+}

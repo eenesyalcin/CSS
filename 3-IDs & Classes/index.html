@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>IDs & Classes</title>
+        <style>
+
+            p{
+                font-size: 20px !important;
+                /* 
+                    1) "!important" ifadesi her zaman baskın olması gereken 
+                       özellikler için kullanılır. 
+                */
+            }
+
+            /*
+                1) CSS kodlarında sınflar(class) nokta( . ) ile tanımlanırlar.
+                2) Sınıf ismi tanımlandıktan sonra o sınıfa ait özellikler süslü
+                   parantezler( {} ) arasına yazılır.
+            */
+            .f25{
+                font-size: 25px;
+            }
+
+            .f30{
+                font-size: 30px;
+            }
+
+            .f35{
+                font-size: 35px;
+            }
+
+            .f40{
+                font-size: 40px;
+            }
+
+            .red{
+                color: red;
+            }
+
+            .blue{
+                color: blue;
+            }
+
+            /*
+                1) CSS kodlarında id'ler sharp( # ) ile tanımlanırlar.
+                2) Id ismi tanımlandıktan sonra o sınıfa ait özellikler süslü
+                   parantezler( {} ) arasına yazılır.
+            */
+            #header{
+                font-size: 50px;
+                background-color: aqua;
+                border: 2px solid black;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <!--
+            1) HTML kodlarında id'leri çekebilmek için aşağıdaki gibi bir yapı kullanırız.
+            2) Aynı id'ye sahip başka bir HTML etiketi olamaz. Çünkü id değerleri HTML    
+               etiketlerinin kimlikleri gibidir.
+            3) Bir HTML etiketi için birden fazla id tanımlanamaz.
+        -->
+        <h1 id="header">KURSLARIMIZ</h1>
+
+
+        <!--
+            1) HTML kodlarında sınıfları(class) çekebilmek için aşağıdaki gibi 
+               bir yapı kullanırız.
+            2) Bir HTML etiketi birden fazla sınıfa sahip olabilir.
+            3) Farklı sınıfları bir arada kullanmak için iki sınıf ismi arasıan 
+               bir boşluk koyulur.
+            4) Aynı sınıfa sahip başka HTML etiketleri olabilir.
+        -->
+        <p class="red f40">Sıfırdan İleri Seviye CSS Dersleri</p>
+
+        <p class="f35">Sıfırdan İleri Seviye CSS Dersleri</p>
+
+        <p class="blue f30">Sıfırdan İleri Seviye CSS Dersleri</p>
+
+        <p class="red f25">Sıfırdan İleri Seviye CSS Dersleri</p>
+
+        <p>Sıfırdan İleri Seviye CSS Dersleri</p>
+
+    </body>
+</html>
