@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Inherit</title>
+        <style>
+
+            /*
+                1) Kapsayıcı olan en geniş elemana bir özellik verdiğimizde, diğer elemanlar
+                   da o elemanın özelliklerini alırlar.
+                2) Burada <body> etiketi tüm etiketleri kapsadığı için diğer etiketler de
+                   <body> etiketinin özelliklerini alırlar.
+                3) Kapsayıcı etiketten bir alt etikete inersek ve etikete özel CSS kodları
+                   yazarsak, o etiket için yazılan kodlar geçerlilik kazanır.
+                4) Tek bir etikete özel CSS kodları yazmak istiyorsak 'id', birden fazla etikete
+                   özel CSS kodları yazmak istiyorsak 'class' kullanabiliriz.
+                5) '!important' özelliği ile CSS kodlarının baskın olmasını sağlayabiliriz.
+                6) Bazı etiketler 'inherit' özelliği ile üstündeki etiketlerin özelliklerini
+                   miras alabilirler.
+            */
+            body{
+                color: brown;
+                font-size: 20px;
+            }
+
+            ul{
+                color: darkgoldenrod;
+                font-size: 15px;
+            }
+
+            li{
+                color: yellowgreen;
+            }
+
+            .orange{
+                /*
+                    '!important' ifadesi ile '.orange' sınıfının,
+                    '#passive' id'sine baskın olmasını sağladık.
+                */
+                color: orange !important;
+            }
+
+            #passive{
+                color: gray;
+                font-size: 55px;
+            }
+
+            a{
+                /* <a> etiketi 'inherit' ile bir üst etiketin özelliklerini miras aldı. */
+                color: inherit;
+            }
+
+            span{
+                color: red;
+                border: 1px solid blue;
+            }
+
+            #inherit span{
+                /*
+                    <span> etiketi 'inherit' ile id'si '#inherit' olan bir üst etiketin özelliklerini miras aldı.
+                */
+                color: inherit;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <h1 class="orange">Komple Uygulamalı Web Geliştirme</h1>
+
+        <ul>
+            <li id="passive" class="orange">HTML5</li>
+            <li>CSS</li>
+            <li class="orange">Javascript</li>
+            <li>
+                <a href="#">Jguery</a>
+            </li>
+        </ul>
+
+        <div style="color: aqua;">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            <span>Molestias, optio?</span>
+        </div>
+
+        <div style="color: green;">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            <span>Molestias, optio?</span>
+        </div>
+
+        <div id="inherit">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            <span>Molestias, optio?</span>
+        </div>
+
+    </body>
+</html>

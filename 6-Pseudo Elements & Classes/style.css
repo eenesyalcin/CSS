@@ -1,0 +1,134 @@
+/*
+    PSEUDO ELEMENT
+
+    Bir elemanın ya da etiketin belli bir kısmında değişiklik yapmak istersek kullanırız.
+    Çift nokta(::) kullanılır.
+*/
+
+
+/* <p> etiketinin ilk satırı. */
+p::first-line{
+    font-weight: bold;
+    color: red;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+
+/* 'class' değeri 'about' olan <p> etiketinin ilk satırı. */
+p.about::first-line{
+    color: blue;
+}
+
+
+/* <p> etiketinin ilk harfi. */
+p::first-letter{
+    font-size: 48px;
+}
+
+
+/* <p> etiketinin sonuna gelecek değer. Eğer "p::before" olsaydı <p> etiketinin başına gelecek değer olurdu. */
+p::after{
+    content: "---> DENEME";
+    display: block;
+    background-color: yellow;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+    PSEUDO CLASS
+    
+    Gruplandırılmış etiketler için kullanılır.
+    Tek nokta(:) kullanılır.
+*/
+
+
+ul li{
+    padding: 10px;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+
+/* <ul> etiketi altındaki <li> etiketinin ilk elemanı. */
+ul li:first-child{
+    background-color: black;
+    color: white;
+}
+
+
+/* <ul> etiketi altındaki <li> etiketinin son elemanı. */
+ul li:last-child{
+    background-color: black;
+    color: white;
+}
+
+
+/* <ul> etiketi altındaki <li> etiketlerinden çift olan elemanlar. */
+ul li:nth-of-type(even){
+    border: 2px solid blue;
+}
+
+
+/* <ul> etiketi altındaki <li> etiketlerinden tek olan elemanlar. */
+ul li:nth-of-type(odd){
+    border: 5px solid gold;
+}
+
+
+a{
+    padding: 5px 8px;
+    text-decoration: none;
+    display: block;
+    width: 80px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+
+/* <a> etiketinde linke tıklanmadan önceki hali. */
+a:link{
+    color: rebeccapurple;
+}
+
+
+/* <a> etiketinde linke tıklandıktan sonraki hali. */
+a:visited{
+    color: red;
+}
+
+
+/* <a> etiketinde link üzerine gelince oluşacak durum. */
+a:hover{
+    color: white;
+    background-color: black;
+}
+
+
+/* <a> etiketinde linke tıklandığı anda oluşacak durum. */
+a:active{
+    color: green;
+    background-color: lawngreen;
+}
+
+
+span{
+    display: none;
+    background-color: yellow;
+    padding: 20px;
+}
+
+
+/* <div> etiketinin üzerine gelindiğinde <span> etiketinin içinde olan değerin görünmesi durumu. */
+div:hover span{
+    display: block;
+}

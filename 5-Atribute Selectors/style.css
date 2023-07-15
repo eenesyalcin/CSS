@@ -1,0 +1,58 @@
+/* ATTRIBUTE SELECTORS */
+
+
+/* 'title' özelliği olan <p> etiketleri. */
+p[title]{
+    border: 2px solid black;
+    padding: 5px;
+}
+
+
+/* 'title' özelliğinin değeri 'third paragraph' olan <p> etiketleri. */
+p[title="third paragraph"]{
+    background-color: gold;
+}
+
+
+/* 'title' özelliğinin değeri içinde 'forth' kelimesi geçen <p> etiketleri. */
+p[title~="forth"]{
+    background-color: aqua;
+}
+
+
+/* 'href' özelliğinin değeri 'https' ile başlayan <a> eiketleri. */
+a[href^="https"]{
+    color: red;
+}
+
+
+/* 'href' özelliğinin değeri 'com' ile biten <a> eiketleri. */
+a[href$="com"]{
+    color: black;
+}
+
+
+/*
+    'href' özelliğinin değeri 'https://www.example.net' olan ve
+    'target' özelliğinin değeri '_blank' olan <a> eiketleri. 
+*/
+a[href$="https://www.example.net"][target="_blank"]{
+    border: 5px solid black;
+    padding: 10px;
+}
+
+
+/* 'type' özelliğinin değeri 'text' olan <input> eiketleri. */
+input[type="text"]{
+    display: block;
+    width: 150px;
+    background-color: yellow;
+}
+
+
+/* 'type' özelliğinin değeri 'button' olan <input> eiketleri. */
+input[type="button"]{
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+}
